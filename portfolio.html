@@ -14,7 +14,8 @@
 </head>
 
 <body class="page">
-    <header class="page-header">
+    <!-- Шапка-->
+    <header class="page-hedaer">
         <div class="container flex">
 
             <a href="./index.html" class="home-link link">
@@ -24,7 +25,7 @@
             <nav class="nav-wrap">
                 <ul class="nav-tabs list">
                     <li>
-                        <a href="./index.html" class="tab-link link">
+                        <a href="./index.html" class="tab-link link ">
                                     Студія
                                 </a>
                     </li>
@@ -43,20 +44,22 @@
 
             <ul class="nav-contacts list">
                 <li>
-                    <a href="mailto:info@devstudio.com">
-                                info@devstudio.com
-                            </a>
+                    <a href="mailto:info@devstudio.com" class="nav-contact-link">
+                        <svg width="16" height="12" class="nav-contacts-icon">
+                            <use href="./images/svg/icon.svg#mail"></use>
+                        </svg><span class="nav-contact-span">info@devstudio.com</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="tel:+380961111111">
-                                +38 096 111 11 11
-                            </a>
+                    <a href="tel:+380961111111" class="nav-contact-link">
+                        <svg width="16" height="12" class="nav-contacts-icon">
+                            <use href="./images/svg/icon.svg#phone"></use>
+                        </svg><span class="nav-contact-span">+38 096 111 11 11</span>
+                    </a>
                 </li>
             </ul>
 
         </div>
-
-    </header>
 
     </header>
     <main>
@@ -184,33 +187,71 @@
                         </div>
                     </li>
                 </ul>
-                <!-- <div class="content-box">
-                </div> -->
             </div>
         </section>
     </main>
     <!--footer-->
-
     <footer class="footer">
 
-        <div class="container">
+        <div class="container flex">
             <div class="footer-contacts">
                 <a href="./index.html" class="footer-link link">
                     <span class="footer-span">Web</span>Studio
                 </a>
                 <address>
-        <ul class="footer-adress">
-            <li class="foot-item">
-               <a href="" class="foot-adress link">м. Київ, пр-т Лесі Українки, 26</a>  
-            </li>
-            <li class="foot-item">
-                <a href="mailto:info@devstudio.com" class="foot-mail link">info@devstudio.com</a>
-            </li>
-            <li class="foot-item">
-                <a href="tel:+380961111111" class="foot-phone link">+38 096 111 11 11</a>
-            </li>
-        </ul>
-        </address>
+            <ul class="footer-adress">
+                <li class="foot-item">
+                   <a href="" class="foot-adress link">м. Київ, пр-т Лесі Українки, 26</a>  
+                </li>
+                <li class="foot-item">
+                    <a href="mailto:info@devstudio.com" class="foot-mail link">info@devstudio.com</a>
+                </li>
+                <li class="foot-item">
+                    <a href="tel:+380961111111" class="foot-phone link">+38 096 111 11 11</a>
+                </li>
+            </ul>
+            </address>
+            </div>
+            <div class="footer-social">
+                <strong class="footer-social-logo">ПРИЄДНУЙТЕСЬ</strong>
+                <ul class="social-wrap">
+                    <li class="social-wrap-item">
+                        <a class="social-link-foot" href="https://instagram.com" target="_blank" rel="nofollow noopener noreferrer" aria-label="Instagram">
+                            <svg class="social-icon-foot" width="20" height="20">
+                                <use href="./images/svg/icon.svg#instagram" >
+
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-wrap-item">
+                        <a class="social-link-foot" href="https://twitter.com" aria-label="Twitter" target="_blank" rel="nofollow noopener noreferrer">
+                            <svg class="social-icon-foot" width="20" height="20">
+                                <use href="./images/svg/icon.svg#twitter">
+
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-wrap-item">
+                        <a class="social-link-foot" href="https://facebook.com" aria-label="Facebook" target="_blank" rel="nofollow noopener noreferrer">
+                            <svg class="social-icon-foot" width="20" height="20">
+                                <use href="./images/svg/icon.svg#facebook">
+
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-wrap-item">
+                        <a class="social-link-foot" href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="nofollow noopener noreferrer">
+                            <svg class="social-icon-foot" width="20" height="20">
+                                <use href="./images/svg/icon.svg#linkedin">
+
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>

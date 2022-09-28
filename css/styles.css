@@ -24,7 +24,14 @@ color: rgba(255, 255, 255, 0.6) */
     --header-border-color: #ECECEC;
     --border-item-color: #ECECEC;
     --grey-bc-color: #F5F4FA;
+    --icon-bg-color: #F5F5F5;
+    --clients-icon-color: #AFB1B8;
 }
+
+
+/* * {
+    outline: 1px solid red;
+} */
 
 .page {
     color: var(--prime-text-color);
@@ -112,6 +119,8 @@ ul {
     font-size: 26px;
     line-height: 1.2;
     color: var(--prime-black-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 
@@ -124,8 +133,6 @@ ul {
 .nav-wrap {
     display: flex;
     margin-left: 93px;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 
 .nav-tabs {
@@ -142,6 +149,8 @@ ul {
 
 .nav-tabs .tab-link {
     text-decoration: none;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .nav-tabs .link.current {
@@ -176,12 +185,27 @@ ul {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .nav-contacts a:hover,
 .nav-contacts a:focus {
     transition: 0.5s;
     color: var(--prime-accent-color);
+}
+
+.nav-contacts-icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.nav-contact-icon:not(:last-child) {
+    padding-right: 10px;
+}
+
+.nav-contact-span {
+    display: inline-block;
 }
 
 
@@ -193,21 +217,19 @@ ul {
     padding-bottom: 200px;
 }
 
-
-/* .hero-overlay {
+.hero-overlay {
     max-width: 1600px;
     min-height: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-image: rgba(47, 48, 58, 0.4);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4));
     background-image: url(../images/mainPageImg/header-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-} */
+}
 
 .hero-cont {
-    justify-content: center;
     text-align: center;
 }
 
@@ -283,38 +305,13 @@ ul {
     margin-bottom: 10px;
 }
 
-.info-title::before {
-    display: block;
-    content: "";
+.feature-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 120px;
-    /* outline: 1px solid red; */
     margin-bottom: 30px;
     background-color: var(--grey-bc-color);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.icon-satelite::before {
-    background-image: url(../images/mainPageImg/info-img1.svg);
-    background-size: 70px 70px;
-}
-
-.icon-clock::before {
-    background-image: url(../images/mainPageImg/info-img2.svg);
-    background-size: 70px 70px;
-}
-
-.icon-pc::before {
-    background-image: url(../images/mainPageImg/info-img3.svg);
-    background-size: 70px 70px;
-}
-
-.icon-man::before {
-    display: block;
-    background-image: url(../images/mainPageImg/info-img4.svg);
-    background-size: 70px 70px;
-    padding: 25px 100px;
 }
 
 .feature-text {
@@ -327,7 +324,6 @@ ul {
 .section-cards {
     display: flex;
     gap: 30px;
-    justify-content: center;
 }
 
 
@@ -351,12 +347,14 @@ ul {
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .team-wrap {
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .team-wrap .title {
@@ -367,6 +365,38 @@ ul {
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
     border-radius: 0px 0px 4px 4px;
     background-color: #fff;
+}
+
+.social-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-wrap-item {
+    padding-bottom: 30px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #AFB1B8;
+    background-color: #fff;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--prime-accent-color);
+    color: #fff;
+}
+
+.social-icon {
+    fill: currentColor;
 }
 
 
@@ -381,6 +411,47 @@ ul {
 }
 
 
+/* ========================
+||ПОСТІЙНІ КЛІЄНТИ
+============================*/
+
+.clients-logo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clients-item {}
+
+.clients-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    margin-bottom: 30px;
+    background-color: var(--icon-bg-color);
+    border: 1px solid #AFB1B8;
+    border-radius: 4px
+}
+
+.clients-item-link {
+    display: block;
+    width: 106px;
+    height: 60px;
+    color: var(--clients-icon-color);
+}
+
+.clients-item-link:hover,
+.clients-item-link:focus {
+    color: var(--prime-accent-color);
+}
+
+.clients-icon {
+    fill: currentColor;
+}
+
+
 /* ------footer-style----------- */
 
 .footer {
@@ -389,6 +460,10 @@ ul {
     background-color: var(--footer-bg-color);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-contacts {
+    margin-right: 70px;
 }
 
 .footer-span {
@@ -436,6 +511,35 @@ footer-adress {
     color: var(--prime-accent-color);
 }
 
+.footer-social-logo {
+    display: block;
+    padding-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.14;
+    color: #fff;
+}
+
+.social-link-foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #AFB1B8;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-link-foot:hover,
+.social-link-foot:focus {
+    background-color: var(--prime-accent-color);
+    color: #fff;
+}
+
+.social-icon-foot {
+    fill: currentColor;
+}
+
 
 /* --------PortfolioStyles-------------*/
 
@@ -446,8 +550,11 @@ footer-adress {
 .examples-list {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: calc((100% - 60px) / 3);
     gap: 30px;
+}
+
+examples-item {
+    flex-basis: calc((100% - 60px) / 3);
 }
 
 .content-list {
@@ -475,6 +582,7 @@ footer-adress {
 .current-all {
     background-color: var(--prime-accent-color);
     color: #ffffff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .examples-info {
@@ -494,6 +602,7 @@ footer-adress {
 }
 
 .item-border .item-title {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
