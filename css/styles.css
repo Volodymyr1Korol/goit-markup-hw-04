@@ -296,7 +296,7 @@ ul {
     gap: 30px;
 }
 
-.feature .title {
+.info-title {
     color: var(--prime-title-color);
     font-weight: 700;
     font-size: 14px;
