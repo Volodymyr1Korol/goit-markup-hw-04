@@ -389,7 +389,7 @@ ul {
 .hero-button {
     cursor: pointer;
     background-color: var(--prime-accent-color);
-    width: 216px;
+    min-width: 216px;
     text-align: center;
     /* white-space: nowrap; */
 }
