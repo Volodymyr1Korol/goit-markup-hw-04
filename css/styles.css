@@ -14,7 +14,7 @@ color: rgba(255, 255, 255, 0.6) */
 /* ------------page style ----------*/
 
  :root {
-    /* --prime-color: #ffffff; */
+    --prime-color: #ffffff;
     --hero-color: #2f303a;
     --prime-text-color: #757575;
     --prime-title-color: #212121;
@@ -84,10 +84,6 @@ p {
     font-style: normal;
 }
 
-a:link {
-    text-decoration: none;
-}
-
 ul {
     list-style: none;
     margin: 0;
@@ -119,8 +115,6 @@ ul {
     font-size: 26px;
     line-height: 1.2;
     color: var(--prime-black-color);
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 
 
@@ -148,6 +142,7 @@ ul {
 }
 
 .nav-tabs .tab-link {
+    display: block;
     text-decoration: none;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -172,7 +167,6 @@ ul {
 
 .nav-tabs a:hover,
 .nav-tabs a:focus {
-    transition: 0.5s;
     color: var(--prime-accent-color);
 }
 
@@ -180,6 +174,8 @@ ul {
 /* Contacts Style */
 
 .nav-contacts a {
+    display: flex;
+    align-items: center;
     color: var(--prime-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -222,8 +218,7 @@ ul {
     min-height: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4));
-    background-image: url(../images/mainPageImg/header-img.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mainPageImg/header-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -234,7 +229,7 @@ ul {
 }
 
 .hero-title {
-    color: #ffffff;
+    color: var(--prime-color);
     width: 696px;
     margin-left: auto;
     margin-right: auto;
@@ -260,18 +255,14 @@ ul {
 
 .button {
     margin: 0 auto;
-    color: #ffffff;
+    color: var(--prime-color);
     font-size: 16px;
     line-height: 1.85;
     font-weight: 700;
     border-radius: 4px;
     padding: 10px 32px;
-    display: block;
     margin-top: 30px;
     letter-spacing: 0.06em;
-    display: flex;
-    text-align: center;
-    align-items: center;
 }
 
 
@@ -311,6 +302,7 @@ ul {
     align-items: center;
     height: 120px;
     margin-bottom: 30px;
+    border-radius: 4px;
     background-color: var(--grey-bc-color);
 }
 
@@ -329,32 +321,28 @@ ul {
 
 /* Team section style */
 
-.team-title .title {
-    font-weight: 500;
-    color: var(--prime-title-color);
-    font-size: 16px;
-    line-height: 1.18;
+.team-wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
 .team-title {
     display: flex;
-    justify-content: center;
     gap: 30px;
+}
+
+.team-title .title {
+    font-weight: 500;
+    color: var(--prime-title-color);
+    font-size: 16px;
+    line-height: 1.18;
 }
 
 .team-info {
     font-size: 16px;
     line-height: 1.18;
-    text-align: center;
     margin-bottom: 16px;
-}
-
-.team-wrap {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-    margin: 0 auto;
 }
 
 .team-wrap .title {
@@ -364,7 +352,7 @@ ul {
 .team-item {
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
     border-radius: 0px 0px 4px 4px;
-    background-color: #fff;
+    background-color: var(--prime-color);
 }
 
 .social-wrap {
@@ -374,10 +362,6 @@ ul {
     gap: 10px;
 }
 
-.social-wrap-item {
-    padding-bottom: 30px;
-}
-
 .social-link {
     display: flex;
     align-items: center;
@@ -385,14 +369,14 @@ ul {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    color: #AFB1B8;
-    background-color: #fff;
+    color: var(--clients-icon-color);
+    background-color: var(--prime-color);
 }
 
 .social-link:hover,
 .social-link:focus {
     background-color: var(--prime-accent-color);
-    color: #fff;
+    color: var(--prime-color);
 }
 
 .social-icon {
@@ -403,11 +387,11 @@ ul {
 /* button */
 
 .hero-button {
-    color: #ffffff;
+    cursor: pointer;
     background-color: var(--prime-accent-color);
     width: 216px;
-    white-space: nowrap;
-    text-align: center
+    text-align: center;
+    /* white-space: nowrap; */
 }
 
 
@@ -417,34 +401,29 @@ ul {
 
 .clients-logo {
     display: flex;
-    justify-content: center;
     gap: 30px;
 }
 
 .clients-item {}
-
-.clients-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 92px;
-    margin-bottom: 30px;
-    background-color: var(--icon-bg-color);
-    border: 1px solid #AFB1B8;
-    border-radius: 4px
-}
 
 .clients-item-link {
     display: block;
     width: 106px;
     height: 60px;
     color: var(--clients-icon-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--clients-icon-color);
+    border-radius: 4px
 }
 
 .clients-item-link:hover,
 .clients-item-link:focus {
     color: var(--prime-accent-color);
+    border-color: var(--prime-accent-color);
 }
 
 .clients-icon {
@@ -479,7 +458,7 @@ ul {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
-    color: #ffffff;
+    color: var(--prime-color);
     display: block;
     margin-bottom: 20px;
 }
@@ -491,7 +470,7 @@ footer-adress {
 }
 
 .foot-adress.link {
-    color: #ffffff;
+    color: var(--prime-color);
     ;
     line-height: 1.7;
 }
@@ -511,12 +490,17 @@ footer-adress {
     color: var(--prime-accent-color);
 }
 
+.footer-flex {
+    display: flex;
+    align-items: baseline;
+}
+
 .footer-social-logo {
     display: block;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     font-weight: 700;
     line-height: 1.14;
-    color: #fff;
+    color: var(--prime-color);
 }
 
 .social-link-foot {
@@ -526,14 +510,13 @@ footer-adress {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    color: #AFB1B8;
+    color: var(--prime-color);
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .social-link-foot:hover,
 .social-link-foot:focus {
     background-color: var(--prime-accent-color);
-    color: #fff;
 }
 
 .social-icon-foot {
@@ -555,6 +538,10 @@ footer-adress {
 
 examples-item {
     flex-basis: calc((100% - 60px) / 3);
+}
+
+.examples-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .content-list {
@@ -581,7 +568,7 @@ examples-item {
 .button-list:focus,
 .current-all {
     background-color: var(--prime-accent-color);
-    color: #ffffff;
+    color: var(--prime-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
