@@ -218,7 +218,7 @@ ul {
     min-height: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mainPageImg/header-img.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main/header-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -390,8 +390,7 @@ ul {
     cursor: pointer;
     background-color: var(--prime-accent-color);
     min-width: 216px;
-    text-align: center;
-    /* white-space: nowrap; */
+    border: none;
 }
 
 
@@ -407,9 +406,6 @@ ul {
 .clients-item {}
 
 .clients-item-link {
-    display: block;
-    width: 106px;
-    height: 60px;
     color: var(--clients-icon-color);
     display: flex;
     justify-content: center;
